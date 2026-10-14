@@ -1,0 +1,27 @@
+*{
+    margin: 1%;
+    padding: 1%;
+    border: 1%;
+    background-color: rgb(255, 255, 255);
+}
+
+h3{color: rebeccapurple;}
+
+table{border: 1px solid blueviolet; border-collapse: collapse;}
+
+th, td{border: 1px solid blueviolet; padding: 5px;}
+
+form{margin: 10px 0;}
+
+form input[type="text"], form input[type="email"], form textarea{width: 100%; padding: 5px; margin-bottom: 10px;}
+
+form input[type="submit"]{background-color: rebeccapurple; color: white; border: none; padding: 10px 20px; cursor: pointer;}
+
+#id{color: rgb(63, 104, 17); font: optional;}
+
+.class{color: rgb(67, 147, 139); font: optional;}
+
+h4{color: rebeccapurple;}
+
+h5,p{color: rgb(67, 147, 139); font: optional;}
+
