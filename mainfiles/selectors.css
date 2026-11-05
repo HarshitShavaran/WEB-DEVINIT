@@ -1,0 +1,121 @@
+/* 1. Universal Selector: Targets every single element on the page */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 2. Type/Element Selector: Targets all elements of a specific HTML tag */
+p {
+  color: #333333;
+}
+
+/* 3. Class Selector: Targets elements with a specific class attribute */
+.btn-primary {
+  background-color: blue;
+}
+
+/* 4. ID Selector: Targets a single unique element with a specific ID attribute */
+#main-header {
+  background-color: black;
+}
+
+/* 5. Grouping Selector: Applies the same styles to multiple comma-separated selectors */
+h1, h2, h3 {
+  font-family: sans-serif;
+}
+/* 1. Descendant Selector (space): Targets ALL matching elements inside the parent */
+div p {
+  color: gray; /* Styles all paragraphs inside any div, no matter how deep */
+}
+
+/* 2. Child Selector (>): Targets only DIRECT children of the parent */
+ul > li {
+  list-style: none; /* Styles only list items directly under ul */
+}
+
+/* 3. Adjacent Sibling Selector (+): Targets the immediate next sibling */
+h1 + p {
+  font-weight: bold; /* Styles only the first paragraph right after an h1 */
+}
+
+/* 4. General Sibling Selector (~): Targets all subsequent siblings */
+h1 ~ p {
+  font-size: 14px; /* Styles all paragraphs that follow an h1 inside the same parent */
+}
+/* 1. Insert Content Before an Element */
+.tip::before {
+  content: "💡 Note: ";
+  font-weight: bold;
+}
+
+/* 2. Insert Content After an Element */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 3. Style the first letter of a text block */
+p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+/* 4. Style the first line of a text block */
+p::first-line {
+  text-transform: uppercase;
+}
+
+/* 5. Style text highlighted/selected by the user */
+::selection {
+  background-color: white;
+  color: black;
+}
+
+/* 6. Style the placeholder text inside inputs */
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+/* Selects all EVEN-numbered siblings (2, 4, 6, 8, etc.) */
+li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Selects all ODD-numbered siblings (1, 3, 5, 7, etc.) */
+li:nth-child(odd) {
+  background-color: #ffffff;
+}
+/* Selects exactly the first item */
+li:nth-child(1) {
+  font-weight: bold;
+}
+
+/* Selects exactly the 5th item */
+li:nth-child(5) {
+  color: red;
+}
+/* Every 3rd element: (3n) matches 3, 6, 9, 12... */
+li:nth-child(3n) {
+  border-bottom: 2px solid blue;
+}
+
+/* Every 3rd element, starting at index 1: (3n+1) matches 1, 4, 7, 10... */
+li:nth-child(3n+1) {
+  background: yellow;
+}
+
+/* All elements from the 4th index onward: (n+4) matches 4, 5, 6, 7... */
+li:nth-child(n+4) {
+  opacity: 0.5;
+}
+
+/* The first 3 elements only: (-n+3) matches 3, 2, 1 */
+li:nth-child(-n+3) {
+  text-transform: uppercase;
+}
+/* Selects the second element that specifically has the class ".featured" */
+/* (Even if there are dozens of normal unstyled elements sitting in between them) */
+li:nth-child(2 of .featured) {
+  background-color: gold;
+}

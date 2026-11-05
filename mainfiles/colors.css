@@ -1,0 +1,42 @@
+/* Opaque Syntax: #RRGGBB */
+color: #3296ff;
+
+/* Translucent Syntax: #RRGGBBAA */
+color: #3296ff80; /* ~50% opacity */
+
+/* Shorthand Syntax (Opaque): #RGB */
+color: #36f; /* Expands to #3366ff */
+
+/* Shorthand Syntax (Translucent): #RGBA */
+color : #36f8; /* Expands to #3366ff88 */
+
+
+/* Modern Syntax (Space-separated) */
+color : rgb(50 150 255);
+
+/* Legacy Syntax (Comma-separated) */
+color : rgb(50, 150, 255);
+
+
+/* Modern Syntax (Uses a forward slash '/') */
+color: rgb(50 150 255 / 0.5);
+color: rgb(50 150 255 / 50%);
+
+/* Legacy Syntax (Requires the distinct 'rgba' function name) */
+color: rgba(50, 150, 255, 0.5);
+
+
+/* Modern Syntax (Space-separated) */
+color: hsl(210 100% 60%);
+color: hsl(210deg 100% 60%); /* Using explicit degree unit */
+
+/* Legacy Syntax (Comma-separated) */
+color: hsl(210, 100%, 60%);
+
+
+/* Modern Syntax (Uses a forward slash '/') */
+color: hsl(210 100% 60 / 0.5);
+color: hsl(210 100% 60 / 50%);
+
+/* Legacy Syntax (Requires the distinct 'hsla' function name) */
+color: hsla(210, 100%, 60%, 0.5);
