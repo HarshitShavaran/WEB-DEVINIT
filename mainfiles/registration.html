@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: auto;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+        }
+
+        body {
+            background-color: #629ee8;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #b3c4d4;
+            width: 100%;
+            max-width: 480px;
+            padding: 40px 35px;
+            border-radius: 16px;
+        }
+
+        .title {
+            text-align: center;
+            color: #1b2ce7;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            color: #060606;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px ;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 14px;
+            color: #ff0000;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #0b99e0;
+        }
+
+        select {
+            color: #349bca;
+            cursor: pointer;
+
+        }
+
+        .radio-group {
+            align-items: center;
+            gap: 15px;
+            margin-top: 6px;
+        }
+
+        .radio-label {
+            align-items: center;
+            font-weight: bold;
+            color: #040404;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            margin-top: 22px;
+            margin-bottom: 25px;
+        }
+
+        .checkbox-label {
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #301968;
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .btn-submit:hover {
+            background-color: #23124d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2 class="title">Student Registration Form</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="male"> Male
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected hidden>Select your course</option>
+                    <option value="cs">CSE</option>
+                    <option value="it">IT</option>
+                    <option value="ee">EE</option>
+                    <option value="me">ME</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="checkbox-label">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
